@@ -6,7 +6,7 @@
 /*   By: cpirlot <cpirlot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 09:31:47 by cpirlot           #+#    #+#             */
-/*   Updated: 2017/11/08 09:32:02 by cpirlot          ###   ########.fr       */
+/*   Updated: 2017/11/08 11:23:03 by cpirlot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ char		*ft_strtrim(const char *s)
 {
 	const char	*temp;
 
+	if (!s)
+		return (NULL);
 	while (is_space(*s))
 		s++;
 	if (!*s)

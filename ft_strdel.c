@@ -6,7 +6,7 @@
 /*   By: cpirlot <cpirlot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 07:31:01 by cpirlot           #+#    #+#             */
-/*   Updated: 2017/11/08 07:31:08 by cpirlot          ###   ########.fr       */
+/*   Updated: 2017/11/08 10:20:34 by cpirlot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 void	ft_strdel(char **as)
 {
+	if (!as)
+		return ;
 	free(*as);
 	*as = NULL;
 }

@@ -6,7 +6,7 @@
 /*   By: cpirlot <cpirlot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 09:23:05 by cpirlot           #+#    #+#             */
-/*   Updated: 2017/11/08 09:29:58 by cpirlot          ###   ########.fr       */
+/*   Updated: 2017/11/08 11:17:41 by cpirlot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,8 @@ char			**ft_strsplit(char const *s, char c)
 	char	*start;
 	char	**result;
 
+	if (!s)
+		return (0);
 	words = nb_words((char *)s, c);
 	if (!(result = (char **)malloc(sizeof(char *) * (words + 1))))
 		return (NULL);
