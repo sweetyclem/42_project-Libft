@@ -6,7 +6,7 @@
 /*   By: cpirlot <cpirlot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 17:20:58 by cpirlot           #+#    #+#             */
-/*   Updated: 2017/11/07 17:21:26 by cpirlot          ###   ########.fr       */
+/*   Updated: 2017/11/08 12:12:46 by cpirlot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,8 @@ void	*ft_memchr(const void *str, int c, size_t n)
 	i = 0;
 	while (n--)
 	{
-		if (s[i] == c)
-			return (&s[i]);
+		if (s[i] == (char)c)
+			return ((void *)&s[i]);
 		i++;
 	}
 	return (NULL);
