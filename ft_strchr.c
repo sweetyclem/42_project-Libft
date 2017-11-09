@@ -6,7 +6,7 @@
 /*   By: cpirlot <cpirlot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 07:26:36 by cpirlot           #+#    #+#             */
-/*   Updated: 2017/11/08 11:49:11 by cpirlot          ###   ########.fr       */
+/*   Updated: 2017/11/09 08:05:51 by cpirlot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ char	*ft_strchr(const char *s, int c)
 	{
 		if (s[i] == c)
 			return ((char *)&s[i]);
-		else if (c == 0)
-			return ((char *)&s[ft_strlen(s)]);
 		i++;
 	}
-	return (0);
+	if (s[i] == c)
+		return ((char *)&s[i]);
+	return (NULL);
 }
