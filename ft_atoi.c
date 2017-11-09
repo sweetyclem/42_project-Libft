@@ -6,42 +6,46 @@
 /*   By: cpirlot <cpirlot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 16:06:43 by cpirlot           #+#    #+#             */
-/*   Updated: 2017/11/08 17:35:05 by cpirlot          ###   ########.fr       */
+/*   Updated: 2017/11/09 07:21:01 by cpirlot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+static const char	*skip_whitespace(const char *str)
 {
-	int				i;
-	unsigned int	res;
-	int				neg;
-	int				max;
+	const char	*s;
 
-	i = 0;
-	neg = 1;
+	s = str;
+	while ((*s >= 9 && *s <= 13) || *s == 32)
+		s++;
+	return (s);
+}
+
+int					ft_atoi(const char *str)
+{
+	unsigned int	res;
+	int				sign;
+	int				max;
+	const char		*s;
+
+	sign = 1;
 	res = 0;
 	max = 0;
-	while ((str[i] >= 9 && str[i] <= 13) || str[i] == 32)
-		i++;
-	if (str[i] == '-')
-	{
-		neg = -1;
-		i++;
-	}
-	else if (str[i] == '+' && neg != -1)
-		i++;
-	while (str[i] >= '0' && str[i] <= '9')
+	s = skip_whitespace(str);
+	if (*s == '-' && s++)
+		sign = -1;
+	else if (*s == '+' && sign != -1)
+		s++;
+	while (*s >= '0' && *s <= '9')
 	{
 		res *= 10;
-		res += (str[i] - '0');
-		i++;
+		res += (*s++ - '0');
 		max++;
 	}
-	if (max > 18 && neg == 1)
+	if (max > 18 && sign == 1)
 		return (-1);
-	if (max > 18 && neg == -1)
+	if (max > 18 && sign == -1)
 		return (0);
-	return (res * neg);
+	return (res * sign);
 }
