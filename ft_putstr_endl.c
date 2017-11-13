@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_endl.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpirlot <cpirlot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 09:21:53 by cpirlot           #+#    #+#             */
-/*   Updated: 2017/11/13 17:00:16 by cpirlot          ###   ########.fr       */
+/*   Created: 2017/11/13 15:50:24 by cpirlot           #+#    #+#             */
+/*   Updated: 2017/11/13 15:50:47 by cpirlot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+void	ft_putstr_endl(const char *str)
 {
-	int		i;
-	char	d;
+	int	i;
 
-	d = (char)c;
-	i = ft_strlen(s);
-	while (i >= 0)
+	i = 0;
+	while (str[i] != '\0')
 	{
-		if (s[i] == d)
-			return ((char*)&s[i]);
-		i--;
+		ft_putchar(str[i]);
+		i++;
 	}
-	return (NULL);
+	ft_putchar('\0');
 }

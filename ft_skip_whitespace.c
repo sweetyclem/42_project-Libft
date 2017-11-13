@@ -1,29 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_skip_whitespace.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cpirlot <cpirlot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/11/08 09:21:53 by cpirlot           #+#    #+#             */
-/*   Updated: 2017/11/13 17:00:16 by cpirlot          ###   ########.fr       */
+/*   Created: 2017/11/13 16:25:53 by cpirlot           #+#    #+#             */
+/*   Updated: 2017/11/13 16:26:44 by cpirlot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strrchr(const char *s, int c)
+const char	*ft_skip_whitespace(const char *str)
 {
-	int		i;
-	char	d;
+	const char	*s;
 
-	d = (char)c;
-	i = ft_strlen(s);
-	while (i >= 0)
-	{
-		if (s[i] == d)
-			return ((char*)&s[i]);
-		i--;
-	}
-	return (NULL);
+	s = str;
+	while ((*s >= 9 && *s <= 13) || *s == 32)
+		s++;
+	return (s);
 }

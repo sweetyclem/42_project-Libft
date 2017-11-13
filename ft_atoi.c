@@ -6,21 +6,11 @@
 /*   By: cpirlot <cpirlot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 16:06:43 by cpirlot           #+#    #+#             */
-/*   Updated: 2017/11/09 07:21:01 by cpirlot          ###   ########.fr       */
+/*   Updated: 2017/11/13 17:06:32 by cpirlot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-static const char	*skip_whitespace(const char *str)
-{
-	const char	*s;
-
-	s = str;
-	while ((*s >= 9 && *s <= 13) || *s == 32)
-		s++;
-	return (s);
-}
 
 int					ft_atoi(const char *str)
 {
@@ -32,7 +22,7 @@ int					ft_atoi(const char *str)
 	sign = 1;
 	res = 0;
 	max = 0;
-	s = skip_whitespace(str);
+	s = ft_skip_whitespace(str);
 	if (*s == '-' && s++)
 		sign = -1;
 	else if (*s == '+' && sign != -1)

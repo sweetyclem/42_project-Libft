@@ -6,7 +6,7 @@
 /*   By: cpirlot <cpirlot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 09:47:49 by cpirlot           #+#    #+#             */
-/*   Updated: 2017/11/08 11:34:29 by cpirlot          ###   ########.fr       */
+/*   Updated: 2017/11/13 16:26:38 by cpirlot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ char			*ft_strnstr(const char *s1, const char *s2, size_t len);
 char			*ft_strmap(const char *s, char (*f)(char));
 char			*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 char			*ft_strrchr(const char *s, int c);
-char			*ft_strrev(char *str);
 char			*ft_strstr(const char *s1, const char *s2);
 char			*ft_strsub(const char *s, unsigned int start, size_t len);
 char			*ft_strtrim(const char *s);
@@ -71,6 +70,9 @@ void			ft_striter(char *s, void (*f)(char *));
 void			ft_striteri(char *s, void (f)(unsigned int, char *));
 void			ft_puterror(char *str);
 void			ft_putnbrendl(int nbr);
+void			ft_putstr_endl(const char *str);
+char			*ft_strrev(char *str);
+const char		*ft_skip_whitespace(const char *str);
 
 typedef	struct	s_list
 {
