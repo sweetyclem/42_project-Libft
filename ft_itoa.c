@@ -6,7 +6,7 @@
 /*   By: cpirlot <cpirlot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/07 17:01:18 by cpirlot           #+#    #+#             */
-/*   Updated: 2017/11/07 17:02:07 by cpirlot          ###   ########.fr       */
+/*   Updated: 2017/11/13 07:44:02 by cpirlot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static int		ft_len(int n)
 {
 	int len;
 
-	len = 0;
+	len = 1;
 	if (n < 0)
 	{
 		len++;
@@ -27,7 +27,7 @@ static int		ft_len(int n)
 		n = n / 10;
 		len++;
 	}
-	return (len + 1);
+	return (len);
 }
 
 char			*ft_itoa(int n)
