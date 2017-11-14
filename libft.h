@@ -6,7 +6,7 @@
 /*   By: cpirlot <cpirlot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 09:47:49 by cpirlot           #+#    #+#             */
-/*   Updated: 2017/11/13 16:26:38 by cpirlot          ###   ########.fr       */
+/*   Updated: 2017/11/14 11:32:04 by cpirlot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <string.h>
+# include <stdbool.h>
 
 char			**ft_strsplit(const char *s, char c);
 char			*ft_itoa(int n);
@@ -70,9 +71,9 @@ void			ft_striter(char *s, void (*f)(char *));
 void			ft_striteri(char *s, void (f)(unsigned int, char *));
 void			ft_puterror(char *str);
 void			ft_putnbrendl(int nbr);
-void			ft_putstr_endl(const char *str);
 char			*ft_strrev(char *str);
 const char		*ft_skip_whitespace(const char *str);
+bool			ft_is_space(char c);
 
 typedef	struct	s_list
 {
