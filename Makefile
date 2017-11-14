@@ -47,19 +47,19 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	@ar rcs $(NAME) $(OBJ)
-	@echo "\n$(NAME) compilation : $(_GREEN)done$(_END)"
+	@echo "\n$(NAME) compilation : $(_CYAN)done$(_END)"
 
 %.o: %.c
-	@printf "%-60b\r" "$(ECHO) $(_GREEN) Compiling $@ $(_END)"
+	@printf "%-60b\r" "$(ECHO) $(_CYAN) Compiling $@ $(_END)"
 	@$(CC) $(FLAGS) -c $<
 
 clean:
 	@$(RM) -f $(OBJ)
-	@echo "clean: $(_GREEN)done$(_END)"
+	@echo "clean: $(_CYAN)done$(_END)"
 
 fclean: clean
 	@$(RM) -f $(NAME)
-	@echo "fclean: $(_GREEN)done$(_END)"
+	@echo "fclean: $(_CYAN)done$(_END)"
 
 re: fclean all
 
