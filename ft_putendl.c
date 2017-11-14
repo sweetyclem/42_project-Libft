@@ -6,7 +6,7 @@
 /*   By: cpirlot <cpirlot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 07:21:19 by cpirlot           #+#    #+#             */
-/*   Updated: 2017/11/08 07:21:26 by cpirlot          ###   ########.fr       */
+/*   Updated: 2017/11/14 10:35:25 by cpirlot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_putendl(const char *s)
 {
 	int i;
 
+	if (!s)
+		return ;
 	i = 0;
 	while (s[i])
 	{
