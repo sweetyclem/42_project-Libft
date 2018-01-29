@@ -74,6 +74,8 @@ clean:
 fclean: clean
 	@$(RM) -f $(NAME)
 
-re: fclean all
+re:
+	@make fclean
+	@make
 
 .PHONY: all clean fclean re
