@@ -6,7 +6,7 @@
 /*   By: cpirlot <cpirlot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 09:47:49 by cpirlot           #+#    #+#             */
-/*   Updated: 2018/01/24 08:41:18 by cpirlot          ###   ########.fr       */
+/*   Updated: 2018/01/30 08:29:43 by cpirlot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 # include <string.h>
 # include <stdbool.h>
 # include <limits.h>
+# include "ft_printf.h"
+# define BUFF_SIZE 32
 # define MAX(a, b) ((a > b) ? a : b)
 # define MIN(a, b) ((a < b) ? a : b)
 
@@ -72,6 +74,7 @@ void			ft_putwstr(wchar_t *str);
 void			ft_putnwstr(wchar_t *str, int n);
 int				ft_wstrlen(wchar_t *str);
 int				ft_wstrnlen(wchar_t *str, int len);
+int				get_next_line(const int fd, char **line);
 
 /*
 ** Hex
