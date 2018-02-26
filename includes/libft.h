@@ -6,7 +6,7 @@
 /*   By: cpirlot <cpirlot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 09:47:49 by cpirlot           #+#    #+#             */
-/*   Updated: 2018/01/31 11:40:39 by cpirlot          ###   ########.fr       */
+/*   Updated: 2018/02/26 11:03:42 by cpirlot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,7 @@ void			ft_strdel(char **as);
 void			ft_striter(char *s, void (*f)(char *));
 void			ft_striteri(char *s, void (f)(unsigned int, char *));
 void			ft_puterror(char *str);
+void			ft_exit_error(char *str);
 char			*ft_strrev(char *str);
 const char		*ft_skip_whitespace(const char *str);
 void			ft_print_ptr(size_t nb);
@@ -76,6 +77,7 @@ int				ft_wstrlen(wchar_t *str);
 int				ft_wstrnlen(wchar_t *str, int len);
 int				get_next_line(const int fd, char **line);
 void			ft_free_array(char ***array);
+int				ft_isnumber(char *str);
 
 /*
 ** Hex
