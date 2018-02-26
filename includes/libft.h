@@ -6,7 +6,7 @@
 /*   By: cpirlot <cpirlot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 09:47:49 by cpirlot           #+#    #+#             */
-/*   Updated: 2018/01/30 08:29:43 by cpirlot          ###   ########.fr       */
+/*   Updated: 2018/01/31 11:40:39 by cpirlot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,7 @@ void			ft_putnwstr(wchar_t *str, int n);
 int				ft_wstrlen(wchar_t *str);
 int				ft_wstrnlen(wchar_t *str, int len);
 int				get_next_line(const int fd, char **line);
+void			ft_free_array(char ***array);
 
 /*
 ** Hex
