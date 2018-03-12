@@ -6,7 +6,7 @@
 /*   By: cpirlot <cpirlot@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/11/08 09:47:49 by cpirlot           #+#    #+#             */
-/*   Updated: 2018/02/26 11:03:42 by cpirlot          ###   ########.fr       */
+/*   Updated: 2018/03/12 08:44:04 by cpirlot          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,7 @@ char			*ft_strmapi(const char *s, char (*f)(unsigned int, char));
 char			*ft_strrchr(const char *s, int c);
 char			*ft_strstr(const char *s1, const char *s2);
 char			*ft_strsub(const char *s, unsigned int start, size_t len);
+char			*ft_strsub_to(char *str, char c);
 char			*ft_strtrim(const char *s);
 int				ft_strcmp(const char *s1, const char *s2);
 int				ft_strequ(const char *s1, const char *s2);
@@ -68,7 +69,7 @@ void			ft_striteri(char *s, void (f)(unsigned int, char *));
 void			ft_puterror(char *str);
 void			ft_exit_error(char *str);
 char			*ft_strrev(char *str);
-const char		*ft_skip_whitespace(const char *str);
+char			*ft_skip_whitespace(char *str);
 void			ft_print_ptr(size_t nb);
 size_t			ft_ptr_len_base(size_t ptr, unsigned int base);
 void			ft_putwstr(wchar_t *str);
@@ -76,7 +77,7 @@ void			ft_putnwstr(wchar_t *str, int n);
 int				ft_wstrlen(wchar_t *str);
 int				ft_wstrnlen(wchar_t *str, int len);
 int				get_next_line(const int fd, char **line);
-void			ft_free_array(char ***array);
+void			ft_free_array(char ***array, int size);
 int				ft_isnumber(char *str);
 
 /*
@@ -128,7 +129,7 @@ t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 /*
 ** Nbr
 */
-int				ft_atoi(const char *str);
+long long		ft_atoi(const char *str);
 int				ft_atoi_base(const char *str, int base);
 int				ft_abs(int a);
 size_t			ft_longlong_len(long long int nbr);
